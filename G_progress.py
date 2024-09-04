@@ -76,7 +76,7 @@ print("5. Если вы работаете с готовым датасетом,
 print("+" * 100)
 print("6. Создайте новое поле is_popular. Значение равно 1, если рейтинг книги не менее 4.6 и при этом у нее не менее 5 отзывов, и 0 в остальных случаях. (1)")
 for id in list_of_ids:
-    if all_books_new[id]["rating"] >= 4.6:
+    if all_books_new[id]["rating"] >= 4.6 and all_books_new[id]["review_count"] >= 5:
         all_books_new[id]["is_popular"] = 1
     else:
         all_books_new[id]["is_popular"] = 0
